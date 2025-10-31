@@ -1,0 +1,11 @@
+
+{% autoescape off %}
+Hi {{user.first_name}},
+
+Kindly click on the link below to confirm your registration.
+http://{{domain}}{%url 'activate' uidb64=uid token=token%}
+
+This email was sent to you because your email was recently signed in to Our site.
+If it wasn't you,Kindly ignore and change your password.
+
+{% endautoescape %}
